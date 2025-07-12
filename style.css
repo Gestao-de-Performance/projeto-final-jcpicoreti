@@ -1,0 +1,48 @@
+/* Estilos gerais do corpo da página */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6; /* Cor de fundo suave */
+  color: #374151; /* Cor do texto principal */
+}
+
+/* Estilos do container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Estilos dos títulos de seção */
+.section-title {
+  font-size: 2.25rem; /* text-4xl do Tailwind */
+  font-weight: 700; /* font-bold do Tailwind */
+  color: #1f2937; /* Cor mais escura para títulos */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Estilos dos cartões de seção (Sobre Mim, Experiência, etc.) */
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem; /* rounded-xl do Tailwind */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg do Tailwind */
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Estilos da imagem de perfil */
+.profile-image {
+  border-radius: 9999px; /* rounded-full do Tailwind */
+  border: 4px solid #60a5fa; /* ring-4 ring-blue-400 do Tailwind */
+  object-fit: cover;
+}
+
+/* Estilos dos ícones de link (e-mail, LinkedIn) */
+.link-icon {
+  width: 1.5rem; /* w-6 do Tailwind */
+  height: 1.5rem; /* h-6 do Tailwind */
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}

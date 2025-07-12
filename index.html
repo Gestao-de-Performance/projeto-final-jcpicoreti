@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julio Cezar Picoreti</title>
+    <!-- Link para o Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Link para o seu arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionais para o layout de projetos em telas maiores */
+        @media (min-width: 768px) {
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                /* Duas colunas para tablet e desktop */
+                gap: 2rem;
+                /* Espaçamento entre os projetos */
+            }
+        }
+
+        /* Estilo para garantir que o corpo da página não seja coberto pelo header fixo */
+        body {
+            padding-top: 4rem;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Cabeçalho da Página com Navegação -->
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-4 shadow-lg fixed w-full top-0 z-50">
+        <div class="container flex flex-col md:flex-row justify-between items-center">
+            <a href="#top" class="text-3xl font-extrabold mb-4 md:mb-0">Julio Picoreti</a>
+            <nav class="space-x-4 md:space-x-6 text-lg">
+                <a href="#top" class="hover:text-blue-200 transition duration-300">Home</a>
+                <a href="#sobre-mim" class="hover:text-blue-200 transition duration-300">Sobre Mim</a>
+                <a href="#experiencia" class="hover:text-blue-200 transition duration-300">Experiência</a>
+                <a href="#educacao" class="hover:text-blue-200 transition duration-300">Educação</a>
+                <a href="#competencias" class="hover:text-blue-200 transition duration-300">Competências</a>
+                <a href="#projetos" class="hover:text-blue-200 transition duration-300">Projetos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Seção Principal de Boas-Vindas -->
+        <section id="top" class="text-center py-8 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl mb-8 shadow-lg mt-8">
+            <!-- Imagem de perfil responsiva -->
+            <picture>
+                <!-- Imagem para telas grandes (FullHD) -->
+                <source media="(min-width: 1920px)" srcset="/img/perfil.jpg">
+                <!-- Imagem para tablets -->
+                <source media="(min-width: 768px)" srcset="/img/perfil.jpg">
+                <!-- Imagem para smartphones -->
+                <source media="(max-width: 767px)" srcset="/img/perfil.jpg">
+                <!-- Imagem padrão (fallback) -->
+                <img src="/img/perfil.jpg" alt="Foto de Perfil de Julio Picoreti" class="profile-image mx-auto mb-6 w-36 h-36">
+            </picture>
+            <h1 class="text-5xl font-extrabold mb-2">Julio Cezar Picoreti</h1>
+            <p class="text-xl font-light mb-4">Sargento da Marinha / Scrum Master - Acredito no uso de Tecnologias Disruptivas para evolução da força de trabalho.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="mailto:juliopicoreti@gmail.com" class="text-white hover:text-blue-200 transition duration-300">
+                    <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    juliopicoreti@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/julio-picoreti/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-200 transition duration-300">
+                    <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M16.3 0H3.7C1.6 0 0 1.6 0 3.7v12.6C0 18.4 1.6 20 3.7 20h12.6c2.1 0 3.7-1.6 3.7-3.7V3.7C20 1.6 18.4 0 16.3 0zM6 17H3V7h3v10zM4.5 5.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM17 17h-3v-5.5c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.9 1.4V17h-3V7h3v1c.5-.9 1.4-1.7 3-1.7 2.2 0 3.8 1.4 3.8 4.5V17z" clip-rule="evenodd"></path>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Mim -->
+        <section id="sobre-mim" class="card">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Olá! Sou Julio Cezar Picoreti. Desde 2004 atuo na como militar da Marinha do Brasil, me aperfeiçoando em Comunicações Navais. Em 2008, fui administrador do setor de informática no navio do qual trabalhava, onde desenvolvi a paixão pela área de informática. Desde então, fiz o possível para aprender mais, estudando em áreas de programação, inovação e inteligência artificial, ainda fazendo o Curso de Aperfeiçoamento Avançado de Tecnologias Disruptivas pela própria Marinha. Em 2023 conheci o agility e me apaixonei pelo Scrum, tirando meu certificado de Scrum Master pela Scrum.org. Em 2024 comecei a graduação em Gestão da Tecnologia da Informação pela faculdade Unintese.
+            </p>
+        </section>
+
+        <!-- Seção Experiência Profissional -->
+        <section id="experiencia" class="card">
+            <h2 class="section-title">Experiência Profissional</h2>
+
+            <div class="mb-8 p-6 border-b border-gray-200 last:border-b-0">
+                <div class="flex items-start mb-4">
+                    <img src="/img/Logo_of_the_Brazilian_Navy_(symbol).png" alt="Logo da Marinha" class="w-16 h-16 rounded-lg mr-4 flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900">1º Sargento em Comunicações Navais</h3>
+                        <p class="text-xl text-gray-700">Marinha do Brasil</p>
+                        <p class="text-md text-gray-500">Brasil | 01/2024 – Atualmente</p>
+                    </div>
+                </div>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Aperfeiçoamento em Comunicações Navais.</li>
+                    <li>Aperfeiçoamento Avançado em Tecnologias Disruptivas.</li>
+                    <li>Curso Especial para Operador de Aeronave remotamente pilotadas a distância.</li>
+                    <li>Curso de Pilotagem Drone Matrice T30.</li>
+                </ul>
+            </div>
+
+            <div class="mb-8 p-6 border-b border-gray-200 last:border-b-0">
+                <div class="flex items-start mb-4">
+                    <img src="/img/gape_odontologia_dra_alinny_gobetti_logo.jpg" alt="Logo da Ágape Odontologia" class="w-16 h-16 rounded-lg mr-4 flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900">Sócio</h3>
+                        <p class="text-xl text-gray-700">Ágape Odontologia</p>
+                        <p class="text-md text-gray-500">01/2017 – Atualmente</p>
+                    </div>
+                </div>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Marketing.</li>
+                    <li>Gestão de Tráfego.</li>
+                    <li>Administração.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção Educação -->
+        <section id="educacao" class="card">
+            <h2 class="section-title">Educação</h2>
+
+            <div class="mb-8 p-6 border-b border-gray-200 last:border-b-0">
+                <div class="flex items-start mb-4">
+                    <img src="/img/logo-unintese-simples.png" alt="Logo da Unintese" class="w-16 h-16 rounded-lg mr-4 flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900">Gestão da Tecnologia da Informação</h3>
+                        <p class="text-xl text-gray-700">Unintese</p>
+                        <p class="text-md text-gray-500">Brasil | 2024 – Em andamento</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8 p-6 border-b border-gray-200 last:border-b-0">
+                <div class="flex items-start mb-4">
+                    <img src="/img/ebac-logo-png_seeklogo-431047.png" alt="Logo da EBAC" class="w-16 h-16 rounded-lg mr-4 flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900">Desenvolvedor Android Mobile & Back-end Python</h3>
+                        <p class="text-xl text-gray-700">EBAC - Escola Britânica de Artes Criativas e Tecnologia</p>
+                        <p class="text-md text-gray-500">Brasil | 2024 – Em andamento</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Competências -->
+        <section id="competencias" class="card">
+            <h2 class="section-title">Competências</h2>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-blue-100 text-blue-800 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Scrum Methodology</span>
+                <span class="bg-blue-100 text-blue-800 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Gestão de projetos</span>
+                <span class="bg-blue-100 text-blue-800 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Técnico em telecomunicações</span>
+                <span class="bg-blue-100 text-blue-800 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Liderança de equipe</span>
+                <span class="bg-blue-100 text-blue-800 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Pilotagem de aeronave remotamente pilotada</span>
+                <span class="bg-blue-100 text-blue-800 text-lg font-medium px-4 py-2 rounded-full shadow-sm">Metodologias ágeis no desenvolvimento de aplicações</span>
+            </div>
+        </section>
+
+        <!-- Seção Projetos/Portfólio -->
+        <section id="projetos" class="card">
+            <h2 class="section-title">Projetos/Portfólio</h2>
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="p-6 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center text-center">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Site Final Fantasy</h3>
+                    <picture class="mb-4 w-full">
+                        <!-- Imagem para telas grandes (FullHD) -->
+                        <source media="(min-width: 1920px)" src="/img/siteff.png">
+                        <!-- Imagem para tablets -->
+                        <source media="(min-width: 768px)" src="/img/siteff.png">
+                        <!-- Imagem para smartphones -->
+                        <source media="(max-width: 767px)" src="/img/siteff.png">
+                        <!-- Imagem padrão (fallback) -->
+                        <img src="/img/siteff.png" alt="Site Final Fantasy" class="w-full h-auto rounded-lg shadow-md">
+                    </picture>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Primeiro projeto que fiz. Um site do Final Fantasy.
+                    </p>
+                    <a href="https://github.com/jcpicoreti/sitefinalfantasy" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium mt-auto">Ver Projeto</a>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="p-6 border border-gray-200 rounded-lg shadow-sm flex flex-col items-center text-center">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Jogo de pedra, papel ou tesoura</h3>
+                    <picture style="text-align: center>
+                        <!-- Imagem para telas grandes (FullHD) -->
+                        <source media=" (min-width: 1920px)" src="/img/Jokenpo.png">
+                        <!-- Imagem para tablets -->
+                        <source media="(min-width: 768px)" src="/img/Jokenpo.png">
+                        <!-- Imagem para smartphones -->
+                        <source media="(max-width: 767px)" src="/img/Jokenpo.png">
+                        <!-- Imagem padrão (fallback) -->
+                        <img width="150" height="150" text-align="text-center" src="/img/Jokenpo.png" alt="Jokenpo">
+                    </picture>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Jogo de pedra, papel ou tesoura que estou desenvolvendo como estudo.
+                    </p>
+                    <a href="https://github.com/jcpicoreti/exerciciomodulo11" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium mt-auto">Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="text-center py-6 text-gray-600 text-sm mt-8">
+            <p>&copy; 2025 Julio Picoreti. Todos os direitos reservados.</p>
+            <p>Criado com <span class="text-red-500">&hearts;</span> para a web.</p>
+            <!-- Contatos no rodapé -->
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="mailto:juliopicoreti@gmail.com" class="text-gray-600 hover:text-blue-500 transition duration-300">
+                    <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    juliopicoreti@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/julio-picoreti/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-500 transition duration-300">
+                    <svg class="link-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M16.3 0H3.7C1.6 0 0 1.6 0 3.7v12.6C0 18.4 1.6 20 3.7 20h12.6c2.1 0 3.7-1.6 3.7-3.7V3.7C20 1.6 18.4 0 16.3 0zM6 17H3V7h3v10zM4.5 5.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM17 17h-3v-5.5c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.9 1.4V17h-3V7h3v1c.5-.9 1.4-1.7 3-1.7 2.2 0 3.8 1.4 3.8 4.5V17z" clip-rule="evenodd"></path>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
